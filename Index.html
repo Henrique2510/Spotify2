@@ -12,7 +12,8 @@
         rel="stylesheet">
     <link rel="icon" href="./Spotify.png">
     <link rel="stylesheet" href="./CSS/style.css">
-    <script type="module" src="./JS/main.js" defer></script>
+    <script type="module" src="./JS/admin.js" defer></script>
+
 </head>
 
 <body>
@@ -21,7 +22,13 @@
             <div class="image">
                 <img src="./Spotify.png" alt="Spotify2" draggable="false">
             </div>
-            <div>
+            <div class="barra-pesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-search preview-icon">
+                    <path d="m21 21-4.34-4.34" />
+                    <circle cx="11" cy="11" r="8" />
+                </svg>
                 <input id="pesquisar" type="text" placeholder="Pesquisar música...">
             </div>
             <div>
@@ -32,15 +39,49 @@
 
     <main>
         <div class="tela">
-        <div class="biblioteca">
+            <div class="biblioteca">
+                <button class="btnCriar" id="novaMusica">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-plus preview-icon">
+                        <path d="M5 12h14" />
+                        <path d="M12 5v14" />
 
-        </div>
-        <div class="explorar">
+                    </svg>
 
-        </div>
-        <div class="descricao">
+                    Criar
+                </button>
+            </div>
+            <div id="fundoTransparente">
+                <div id="formularioMusica">
+                    <h2>Criar música</h2>
 
-        </div>
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" placeholder="">
+
+                    <label for="titulo">Artista</label>
+                    <input type="text" id="titulo" placeholder="">
+
+                    <label for="titulo">Álbum</label>
+                    <input type="text" id="titulo" placeholder="">
+
+                    <label for="titulo"></label>
+                    <input type="text" id="titulo" placeholder="">
+
+                    <label for="titulo"></label>
+                    <input type="text" id="titulo" placeholder="">
+
+                    <label for="titulo"></label>
+                    <input type="text" id="titulo" placeholder="">
+
+
+                </div>
+            </div>
+            <div class="explorar">
+
+            </div>
+            <div class="descricao">
+            </div>
         </div>
     </main>
 
