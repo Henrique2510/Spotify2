@@ -1,33 +1,26 @@
 import { auth, database } from "./firebaseConfig.js";
-
-import {
-    ref,
-    push,
-    set,
-    get,
-    update,
-    remove
-} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+import { ref, push, set, get } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
 const musicasRef = ref(database, "musicas");
 
 async function criarMusica(titulo, artista, estilo, capaURL, audioURL) {
     const novaMusica = push(musicasRef);
-
-    await set(novaMusica, {
-        titulo,
-        artista,
-        estilo,
-        capaURL,
-        audioURL
-    });
+    await set(novaMusica, { titulo, artista, estilo, capaURL, audioURL});
 };
+
+// CREATE
 
 const botaoCriar = document.getElementById("novaMusica");
 const fundoTransparente = document.getElementById("fundoTransparente");
 
 botaoCriar.addEventListener("click", () => {
     fundoTransparente.style.display = "flex";
+});
+
+const botaoVoltar = document.getElementById("voltar")
+
+botaoVoltar.addEventListener("click", () => {
+    fundoTransparente.style.display = "none";
 });
 
 const titulo = document.getElementById("titulo");
@@ -82,6 +75,7 @@ salvarMusica.addEventListener("click", async () => {
     audioURL.value = "";
 });
 
+// READ
 
 const listarMusicas = document.getElementById("listaMusicas")
 const descricao = document.querySelector(".descricao");
@@ -112,3 +106,6 @@ async function listarMusica() {
     }
 }
 listarMusica()
+
+
+
