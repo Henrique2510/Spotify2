@@ -27,6 +27,9 @@ main {
 footer {
     width: 100vw;
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -85,26 +88,6 @@ input:focus {
     height: 5.4vh;
 }
 
-.btn-entrar {
-    background-color: #e0b43a;
-    color: #121212;
-    border: none;
-    border-radius: 500px;
-    cursor: pointer;
-    transition: transform 0.06s ease, background-color 0.15s ease;
-    font-weight: 800;
-    font-size: 16px;
-}
-
-.btn-entrar:hover {
-    transform: scale(1.01);
-}
-
-.btn-entrar:active {
-    background-color: #c8a741;
-    transform: scale(0.98);
-}
-
 .biblioteca {
     width: 20vw;
     height: 83vh;
@@ -146,7 +129,7 @@ input:focus {
     gap: 7px;
 }
 
-.tela h1{
+.tela h1 {
     width: 100%;
     padding: 16px 24px;
     font-weight: 800;
@@ -222,6 +205,7 @@ input:focus {
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 #formularioMusica {
@@ -295,6 +279,9 @@ input:focus {
     padding: 8px;
     cursor: pointer;
     color: #fff;
+    background-color: #0f0f0f;
+    border-radius: 20px;
+    margin-bottom: 5px;
 }
 
 #listaMusicas li img {
@@ -308,7 +295,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
 }
 
 .descricao img {
@@ -316,10 +303,14 @@ input:focus {
     height: 250px;
     object-fit: cover;
     border-radius: 12px;
+
 }
 
 .descricao h2 {
     font-size: 28px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
 }
 
 .descricao p {
@@ -359,4 +350,118 @@ input:focus {
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+#player {
+    width: 40vw;
+    height: 6vh;
+    color-scheme: dark;
+}
+
+.btnExcluir {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #212126;
+    color: #f0eaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnExcluir svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btnExcluir:hover {
+    background: #e5484d;
+    color: #fff;
+}
+
+.btnCurtir {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #212126;
+    color: #f0eaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnCurtir svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btnCurtir:hover {
+    background: #333;
+}
+
+.btnCurtir.ativo {
+    color: #e0b43a;
+}
+
+.btnCurtir.ativo svg {
+    fill: currentColor;
+}
+
+#listaCurtidas {
+    list-style: none;
+    padding: 12px;
+    
+}
+ 
+#listaCurtidas li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+}
+ 
+#listaCurtidas li:hover {
+    background: #2a2a30;
+}
+ 
+#listaCurtidas li img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+ 
+.btnEditar {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #212126;
+    color: #f0eaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.btnEditar svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btnEditar:hover {
+    background: #333;
+    color: #fff;
 }
